@@ -1,0 +1,10 @@
+<%= simple_form_for(@cocktail) do |f|%>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.submit %>
+<% end %>
+
+
+<i class="fas fa-pen"></i>
+<%= link_to 'Back to list', cocktails_path %>
+
