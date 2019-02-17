@@ -3,13 +3,20 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: white;
   padding: 16px 24px;
   height: 70px;
+  background-color: transparent;
+  transition: 0.5s background-color ease;
+}
+
+.navbar-lewagon-grey {
+  background-color: #d1d1d1;
 }
 
 .navbar-lewagon .brand {
-  width: 40px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
 }
 
 .navbar-lewagon .navbar-lewagon-actions {
@@ -19,19 +26,8 @@
 
 .navbar-lewagon .navbar-lewagon-actions .navbar-lewagon-link {
   margin-left: 24px;
-  color: #999999;
+  color: white;
 }
 .navbar-lewagon .navbar-lewagon-actions .navbar-lewagon-link:hover {
   color: #151515;
-}
-
-.navbar-lewagon .navbar-lewagon-actions .avatar {
-  margin-left: 24px;
-  border-radius: 50%;
-  height: 40px;
-  width: 40px;
-}
-
-.navbar-lewagon .dropdown-toggle {
-  cursor: pointer;
 }
