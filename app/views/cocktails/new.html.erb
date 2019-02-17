@@ -1,10 +1,13 @@
-<h3>Add a new cocktail</h3>
-<%= simple_form_for(@cocktail) do |f|%>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  <%= f.submit %>
-<% end %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <h1>Create a new cocktail</h1>
 
-<i class="fas fa-pen"></i>
-<%= link_to 'Back to list', cocktails_path %>
-
+      <%= simple_form_for @cocktail do |f| %>
+        <%= f.input :name %>
+        <%= f.button :submit, class: 'btn btn-primary' %>
+      <% end %>
+      <%= link_to 'Back to all cocktails', cocktails_path %>
+    </div>
+  </div>
+</div>

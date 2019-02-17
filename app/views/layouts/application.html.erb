@@ -1,18 +1,53 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>RailsMisterCocktail</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>RailsMisterCocktail</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-  </head>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+</head>
 
-  <body>
-    <%= yield %>
-    <%= javascript_include_tag "application" %> <!-- from app/assets/javascripts/application.js -->
-    <%= javascript_pack_tag "application" %>    <!-- from app/javascript/packs/application.js -->
-  </body>
+<body>
+  <div class="navbar-lewagon">
+    <a href="#">
+      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" class="brand">
+    </a>
+
+    <!-- displayed on laptops -->
+    <div class="navbar-lewagon-actions d-none d-sm-flex">
+      <a href="#" class="navbar-lewagon-link">Browse flats</a>
+      <div class="badge-container">
+        <a href="#" class="navbar-lewagon-link">Messages <span class="badge badge-pill badge-secondary text-white">5</span></a>
+      </div>
+      <div class="dropdown">
+        <img src='https://kitt.lewagon.com/placeholder/users/cveneziani' class="avatar dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"/>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="#"><i class="fas fa-user"></i> Account</a>
+          <a class="dropdown-item" href="#"><i class="fas fa-cogs"></i> Settings</a>
+          <a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt"></i> Log out</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <%= yield %>
+  <%= javascript_include_tag "application" %> <!-- from app/assets/javascripts/application.js -->
+  <%= javascript_pack_tag "application" %>    <!-- from app/javascript/packs/application.js -->
+
+  <div class="footer">
+    <div class="footer-links">
+      <a href="#"><i class="fab fa-github"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+    </div>
+    <div class="footer-copyright">
+      This footer is made with <i class="fas fa-heart"></i> at Le Wagon
+    </div>
+  </div>
+</body>
 </html>

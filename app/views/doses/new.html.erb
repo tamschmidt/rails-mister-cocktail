@@ -1,10 +1,14 @@
-<h3>Add a new dose</h3>
-<%= simple_form_for [@cocktail, @dose] do |f| %>
-  <%= f.association :ingredient %>
-  <%= f.input :description %>
-  <%= f.button :submit %>
-<% end %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <h1>Add a new dose</h1>
 
-<i class="fas fa-pen"></i>
-<%= link_to 'Back to cocktail', cocktail_path(@cocktail) %>
-
+      <%= simple_form_for [@cocktail,@dose] do |f| %>
+        <%= f.association :ingredient %>
+        <%= f.input :description %>
+        <%= f.button :submit, class: 'btn btn-primary' %>
+      <% end %>
+      <%= link_to 'Back to cocktail', cocktail_path(@cocktail) %>
+    </div>
+  </div>
+</div>
